@@ -1,0 +1,59 @@
+// mutations
+export const CHANGE_NAME = 'CHANGE_NAME';
+export const CHANGE_DEMO = 'CHANGE_DEMO';
+export const CHANGE_CASH = 'CHANGE_CASH';
+export const SUBMIT_QUESTIONNAIRE = 'SUBMIT_QUESTIONNAIRE';
+
+//guodu
+export const CHANGE_GUODU_STATE = 'CHANGE_GUODU_STATE';
+export const ADD_CASH_GUODU = 'ADD_CASH_GUODU';
+export const INIT_CASH_GUODU = 'INIT_CASH_GUODU';
+
+//convoy
+export const CHANGE_CONVOY_STATE = 'CHANGE_CONVOY_STATE';
+// environment
+export const CHANGE_IS_TEST = 'CHANGE_IS_TEST';
+
+
+// routers
+export const NAVIGATE_TO_PAGE = 'NAVIGATE_TO_PAGE';
+export const NAVIGATE_TO_CONFIRM = 'NAVIGATE_TO_CONFIRM';
+export const STORE_NEXT_URL = 'STORE_NEXT_URL';
+export const STORE_CURRENT_PAGE = 'STORE_CURRENT_PAGE';
+
+// statement
+export const SHOW_STATEMENT = 'SHOW_STATEMENT';
+export const SHOW_RISK_STATEMENT = 'SHOW_RISK_STATEMENT';
+export const AGREE_STATEMENT = 'AGREE_STATEMENT';
+export const DISAGREE_STATEMENT = 'DISAGREE_STATEMENT';
+export const CHANGE_CHECKBOX = 'CHANGE_CHECKBOX';
+
+
+// users
+export const SET_USER_CLIENT = 'SET_USER_CLIENT';
+
+// risktype
+export const SET_RISKTYPE = 'SET_RISKTYPE';
+
+// sfc
+export const TOGGLE_SFC_STATE = 'TOGGLE_SFC_STATE';
+export const CHANGE_MENU_ITEMS = 'CHANGE_MENU_ITEMS';
+export const GO_BACK = 'GO_BACK';
+export const TOGGLE_USER_SUMMARY_CONFIRMED = 'TOGGLE_USER_SUMMARY_CONFIRMED';
+export const TOGGLE_MOCK_DATA = 'TOGGLE_MOCK_DATA';
+export const STORE_RECORDS = 'STORE_RECORDS';
+
+export const STORE_TRANSACTION_INDEX = 'STORE_TRANSACTION_INDEX';
+export const STORE_TRANSACTIONS = 'STORE_TRANSACTIONS';
+export const STORE_ACCDATA = 'STORE_ACCDATA';
+
+// Chart
+export const STORE_LATEST_DATE = 'STORE_LATEST_DATE';
+
+// websocket
+
+export const WS_EVENT_CONNECT = 'WS_EVENT_CONNECT';
+export const WS_EVENT_CONFIRM = 'WS_EVENT_CONFIRM';
+export const WS_EVENT_REJECT = 'WS_EVENT_REJECT';
+export const WS_EVENT_NOTICE = 'WS_EVENT_NOTICE';
+export const WS_EVENT_KICKOFF = 'WS_EVENT_KICKOFF';
