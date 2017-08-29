@@ -10,46 +10,6 @@ Vue.use(Vuex);
 
 const state = {
   cash: 0,
-  cashGuodu: '0.00',
-  nextUrl: '',
-  riskStatement: {
-    confirmed: false,
-    shown: false,
-  },
-  qAnswer: '',
-  userClient: '',
-  statement: {
-    confirmed: false,
-    shown: false,
-  },
-  currentPage: 'login',
-  previousPage: '',
-  questionStatus: 0,
-  isSFC: false,
-  isGuodu: false,
-  isConvoy: false,
-  isMocked: false,
-  menu: {
-    backable: false,
-    settingable: true,
-    title: '康宏证券投资',
-  },
-  userSummaryConfirmed: false,
-  records: [],
-  transactionIndex: 0,
-  transaction: {},
-  amount: 0,
-  accData: {},
-  checkbox: false,
-  latestDate: new Date(),
-  //ws event
-  wsConnect: false,
-  wsConfirm: false,
-  wsReject: false,
-  wsNotice: false,
-  wsKickoff: false,
-  //
-  isTest: false,
 };
 const debug = process.env.NODE_ENV !== 'production';
 

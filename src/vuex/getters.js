@@ -1,8 +1,4 @@
 const getters = {
-  // getLang: state => state.test.currentLang,
-  // getApi: state => state.getApi.demo,
-  qAnswer: state => state.qAnswer,
-  userClient: state => state.userClient,
   selectedNav: (state) => {
     const tabs = {
       overview: 1,

@@ -6,6 +6,11 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+
+// axios.get(url).then((res)=>{
+//   this.data = res.data
+// })
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

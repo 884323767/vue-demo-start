@@ -1,0 +1,267 @@
+/*!
+ * Common CSS should be here.
+ */
+
+@import 'variables';
+
+@import 'fontsize';
+
+@import 'gold';
+
+html, body {
+    height: 100%;
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    @include f32();
+    background-color: #F9F9F7;
+   // -webkit-touch-callout: none;
+    user-select: none;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    max-height: 100000px;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+input[type=text] {
+    outline: 0;
+    border: none;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color:transparent;
+}
+.st-h3 {
+    font-size: 1.5rem;
+}
+.st-h4 {
+    font-size: 1.2rem;
+}
+.st-h6 {
+    font-size: 1rem;
+}
+
+.st-left-right-pandding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: white;
+}
+
+.dock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    &.dock-vertical {
+        -webkit-box-orient: vertical;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+.docked-top {
+    position: relative;
+    z-index: 1;
+}
+.docked-body {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    overflow: auto;
+}
+.docked-bottom {
+    text-align: center;
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .flexbox-vertical {
+        flex-direction: column;
+    }
+}
+
+
+.slide-left {
+    &-transition {
+        transition: transform .3s ease;
+        overflow: hidden;
+    }
+    &-enter {
+        transform: translateX(100%);
+    }
+    &-leave {
+        transform: translateX(-100%);
+    }
+}
+
+.slide-right {
+    &-transition {
+        transition: transform .3s ease;
+        overflow: hidden;
+    }
+    &-enter {
+        transform: translateX(-100%);
+    }
+    &-leave {
+        transform: translateX(100%);
+    }
+}
+
+.slide-top {
+    &-transition {
+        transition: transform .3s ease;
+        overflow: hidden;
+    }
+    &-enter {
+        transform: translate3d(0,100%,0);
+    }
+    &-leave {
+        transform: translate3d(0,-100%,0);
+    }
+}
+
+.slide-down {
+    &-transition {
+        transition: transform .3s ease;
+        overflow: hidden;
+    }
+    &-enter {
+        transform: translate3d(0,-100%,0);
+    }
+    &-leave {
+        transform: translate3d(0,100%,0);
+    }
+}
+
+.btn-next {
+    padding: rem(30px);
+    & > button {
+        background-color: $theme-color;
+        color: #fff;
+        width: 100%;
+        @include f40();
+        line-height: 1;
+        padding-top: $btn-next-padding-top;
+        padding-bottom: $btn-next-padding-bottom;
+        border: none;
+        border-radius: $btn-next-border-radius;
+        font-family: inherit;
+        &:active {
+            border: none;
+            background-color: $theme-color-active;
+        }
+        &:disabled,
+        &.disabled {
+            background: $theme-color-light;
+        }
+    }
+}
+
+.page {
+    background-color: #f7f7f7;
+}
+
+.icon {
+    display: inline-block;
+    width: rem(44px);
+    height: rem(44px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &.down {
+       background-image: url(../assets/down.png);
+
+       &:active {
+           background-image: url(../assets/down_press.png);
+       };
+    }
+}
+.link-container a{
+    color:$theme-color;
+    text-decoration: underline;
+}
+.help .icon {
+    width: rem(15);
+    height: rem(15);
+    background-image: url('../assets/info.png');
+    background-size: contain;
+    margin-left: rem(6);
+    vertical-align: bottom;
+}
+.address-detail {
+    line-height: rem(21);
+    background: $white-background-color;
+    padding: rem(20) rem(16);
+}
+.field-title {
+    background: $white-background-color;
+    margin-top: rem(12);
+    padding: rem(13) rem(16);
+}
+.disabled {
+}
+
+.black {
+    &.page {
+        background: $page-background;
+    }
+}
+
+.font-size-xlarge {
+    @include f40();
+}
+.font-size-large {
+    @include f36();
+}
+.font-size-normal {
+    @include f32();
+}
+.font-size-small {
+    @include f28();
+}
+.font-size-tiny {
+    @include f24();
+}
+.font-size-xtiny {
+    @include f20();
+}
+.mint-toast {
+    .mint-toast-text {
+        @include f28();
+        margin: rem(10px);
+    }
+}

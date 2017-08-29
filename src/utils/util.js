@@ -2,6 +2,29 @@ import Raven from 'raven-js';
 
 let flag = true;
 
+export function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+const _storageAvailable = (function() {
+    try {
+        var storage = window.localStorage,
+            x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return function() {
+            return true
+        };
+    } catch (e) {
+        logger.warn('current browser do not support local storage!');
+        return function() {
+            return false
+        };
+    }
+}());
+
 export default {
   errHandle(obj, msg, err) {
     if (flag) {
