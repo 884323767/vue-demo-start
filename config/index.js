@@ -27,7 +27,18 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    //配置代理转发,解决跨域
+    proxyTable: {
+      '/v1': {
+        target: 'https://test-guodu.aqumon.com',
+        secure: false,
+        changeOrigin: true,
+        logLevel: 'debug',
+        // onProxyRes: function (proxyRes, req, res) {
+        //   // console.log(req);
+        // }
+      }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

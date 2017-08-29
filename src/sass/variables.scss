@@ -1,0 +1,30 @@
+$rem-base: 16px !default;
+
+@function rem($value, $base-value: $rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+
+$item-top: 8px;
+
+$iuid-top: 27px;
+$iuid-left: 37px;
+$iuid-right: 22px;
+$orange: #fc9134;
+$smallText: 12px;
+
+$description-top: 8px;
+$description-bottom: 20px;
+
+// color
+$gray: #898989;
+$white: #ffffff;
+$black: #313131;
+$yellow: #ffe5ab;
+$white-blue: #cae9f2;

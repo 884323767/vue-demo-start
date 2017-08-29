@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createPersistedState from 'vuex-persistedstate';
+// import createPersistedState from 'vuex-persistedstate';
 import createLogger from 'vuex/dist/logger';
 import actions from './actions';
 import getters from './getters';
@@ -19,9 +19,10 @@ const store = new Vuex.Store({
   state,
   mutations,
   strict: debug,
-  plugins: debug ?
-    [createLogger(), createPersistedState({ storage: window.sessionStorage })] :
-    [createPersistedState({ storage: window.sessionStorage })],
+  plugins: debug ?  [createLogger()] : [],
+  // plugins: debug ?
+  //   [createLogger(), createPersistedState({ storage: window.sessionStorage })] :
+  //   [createPersistedState({ storage: window.sessionStorage })],
 });
 
 if (module.hot) {

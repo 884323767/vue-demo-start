@@ -1,0 +1,39 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.32;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInAll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeInAll {
+  animation-name: fadeInAll;
+  animation-duration: 0.5s;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 0.32;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+}

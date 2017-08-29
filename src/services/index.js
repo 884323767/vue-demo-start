@@ -1,7 +1,7 @@
-import account from './account';
+import demo from './demo';
 
 const services = {
-  ...account,
+  ...demo,
 };
 
-export services;
+export default services;

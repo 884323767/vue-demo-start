@@ -1,5 +1,6 @@
 import {
   CHANGE_CASH,
+  ADD_CASH_GUODU,
 } from './mutationType';
 
 const mutations = {
