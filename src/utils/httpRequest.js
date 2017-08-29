@@ -16,7 +16,7 @@ axios.interceptors.request.use(function(config) {
   request.headers.set('X-product', 'guodu');
   request.url = url;
   return config;
-}，function(error) {
+},function(error) {
   //请求错误时做些事
   return Promise.reject(error);
 });
@@ -26,7 +26,7 @@ axios.interceptors.response.use(function(response) {
   //对响应数据做些事
 
   return response;
-}，function(error) {
+},function(error) {
   //请求错误时做些事
   return Promise.reject(error);
 });

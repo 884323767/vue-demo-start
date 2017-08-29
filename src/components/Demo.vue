@@ -28,7 +28,5 @@ export default {
 }
 </script>
 <style lang="scss">
-.demo {
-
-}
+.demo {}
 </style>
