@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import services from '@/services';
+
 export default {
   components: {
 
@@ -13,28 +15,33 @@ export default {
   data() {
     return {
 
-    }
+    };
   },
   methods: {
     init() {
-    }
+    },
   },
   mounted() {
-    //test for vuex
+    // test for vuex
     console.log(this.$store.state.cash);
-    this.$store.commit("CHANGE_CASH",1000);
+    this.$store.commit('CHANGE_CASH', 1000);
     console.log(this.$store.state.cash);
-    //test for i18n
+    // test for i18n
     console.log(this.$t('app.setting'));
+    // test for services
+    services.getProduct().then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    });
 
-
-    this.$nextTick(function () {
+    this.$nextTick(() => {
       this.init();
-    })
+    });
   },
   beforeDestroy() {
 
-  }
+  },
 };
 </script>
 

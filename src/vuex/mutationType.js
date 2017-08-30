@@ -4,12 +4,12 @@ export const CHANGE_DEMO = 'CHANGE_DEMO';
 export const CHANGE_CASH = 'CHANGE_CASH';
 export const SUBMIT_QUESTIONNAIRE = 'SUBMIT_QUESTIONNAIRE';
 
-//guodu
+// guodu
 export const CHANGE_GUODU_STATE = 'CHANGE_GUODU_STATE';
 export const ADD_CASH_GUODU = 'ADD_CASH_GUODU';
 export const INIT_CASH_GUODU = 'INIT_CASH_GUODU';
 
-//convoy
+// convoy
 export const CHANGE_CONVOY_STATE = 'CHANGE_CONVOY_STATE';
 // environment
 export const CHANGE_IS_TEST = 'CHANGE_IS_TEST';

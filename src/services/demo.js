@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from './httpRequest';
 // import store from '../vuex/store' 之后可以使用vuex中store commit等方法
 
 const api = {
@@ -7,14 +7,11 @@ const api = {
 
 const demo = {
   // invtAccount
-  getProduct() {
+  getProduct(uid) {
     const url = api.demo.replace(':uid', uid);
     return axios.get(url).then((response) => {
       const res = response.data;
-      if (res.body.errors) {
-        return Promise.reject(res.body.errors);
-      }
-      return res.body;
+      return res;
     }).catch(res => Promise.reject(res));
   },
 };

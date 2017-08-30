@@ -1,5 +1,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+/* eslint-disable import/first */
 import Vue from 'vue';
 import store from './vuex/store';
 import App from './App';
@@ -20,10 +21,13 @@ Raven
     .addPlugin(RavenVue, Vue)
     .install();
 
-//test for raven
+// test for raven
 Raven.captureException('test');
 
 Vue.config.productionTip = false;
+
+// 将axios挂载到prototype上，在组件中可以直接使用this.axios访问
+// Vue.prototype.axios = axios;
 
 let language = sessionStorage.getItem('language');
 

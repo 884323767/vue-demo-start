@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+// vuex 持久化
 // import createPersistedState from 'vuex-persistedstate';
 import createLogger from 'vuex/dist/logger';
 import actions from './actions';
@@ -19,11 +20,13 @@ const store = new Vuex.Store({
   state,
   mutations,
   strict: debug,
-  plugins: debug ?  [createLogger()] : [],
+  plugins: debug ? [createLogger()] : [],
   // plugins: debug ?
   //   [createLogger(), createPersistedState({ storage: window.sessionStorage })] :
   //   [createPersistedState({ storage: window.sessionStorage })],
 });
+
+/* eslint-disable global-require */
 
 if (module.hot) {
   module.hot.accept([

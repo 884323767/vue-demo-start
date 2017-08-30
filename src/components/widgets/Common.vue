@@ -9,21 +9,21 @@ export default {
   data() {
     return {
 
-    }
+    };
   },
   methods: {
     init() {
-    }
+    },
   },
   mounted() {
-    this.$nextTick(function () {
+    this.$nextTick(() => {
       this.init();
-    })
+    });
   },
   beforeDestroy() {
 
-  }
-}
+  },
+};
 </script>
 <style lang="scss">
 .demo {}

@@ -29,9 +29,9 @@ const getters = {
   userSummaryConfirmed: state => state.userSummaryConfirmed,
   transaction: (state) => {
     const target = state.records[state.transactionIndex];
-    if (!target) {
-      return;
-    }
+    // if (!target) {
+    //   return;
+    // }
 
     const flattened = arr => arr.reduce((a, b) => a.concat(b), []);
     const sumAllMoney = arr => arr.reduce((prev, curr) => prev + +curr.money, 0);
